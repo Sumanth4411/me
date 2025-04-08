@@ -1,0 +1,163 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  /* ===== Smooth Background Gradient Transition ===== */
+body {
+    transition: background 1.5s ease;
+}
+
+/* ===== Section Fade-in Animation ===== */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+  
+  /* Marquee Styling */
+  marquee {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+  }
+  
+  /* Navbar Styles */
+  header {
+    background: #222;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #4caf50;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  .skills-container,
+  .project-container,
+  .certificate-container,
+  .internship-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Skill/Project/Card Box Styles */
+  .skill, .project, .certificate, .internship {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill:hover, .project:hover, .certificate:hover, .internship:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+  }
+  
+  /* Hire Me Form */
+  #hire-me form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 12px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #45a049;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+    }
+  }
+  
